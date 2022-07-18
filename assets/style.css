@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    scroll-behavior: smooth;
+    --main-color:#D2EFE9;
+    --second-color:red;
+    --third-color:black;
+}
+
+.section__title{
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--second-color);
+  margin: 0 auto;
+}
+
+.section__subtitle{
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--black-color);
+}
+
+/**************NavBar***********/
+nav{
+  background:none;
+  box-shadow:none;
+  height: 5.5rem;
+  position: fixed;
+  top: 0rem;
+}
+
+.navbar-nav{
+    margin-left: auto;
+    padding-right: 6rem;
+}
+
+.nav-item{ 
+    margin:0 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.dropdown-item{
+    margin: .5rem 0;
+}
+
+.logo__img{position: relative;
+    width: 30%;
+}
+.nav-link:hover ,.dropdown-item:hover{
+  color: red !important;
+  }
+  .nav-item::after{
+  display:block;
+  content: "";
+  width: 0;
+  height:0;
+  background-color: red;
+  margin: auto ;
+  border-radius: 50%;
+  }
+ .nav-item:hover::after{
+  height:4px;
+   width:4px;
+    }
+
+@media screen and (max-width:720px){
+ 
+  .logo__img{
+   width: 20%;
+   position: absolute;
+
+  }
+  .navbar-toggler{
+    margin-right: 2rem;
+  }
+  .navbar-collapse{
+    margin-right: 6rem;
+  }
+  #navbarNavDropdown{
+    background: rgba( 255, 255, 255, 0.20 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+  }
+}
+/*********Home*************/
+#hero{
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/imgs/music\ home1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container__hero{
+  padding: 10rem 6rem;
+}
+.hero span{
+  color: red;
+}
+.hero__title{
+  font-size: 3rem;
+  color: var(--white-color);
+}
+
+.hero__main{
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: white;
+  margin:1rem 0;
+}
+
+.hero__subtitle{
+  font-size: 1rem;
+  color: white;
+  margin-top: .5rem;
+  margin:1rem 0;
+
+}
+.video1{
+  width: 30rem;
+  height: 20rem;
+  margin-left: 120px;
+}
+
+.content {
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  color: black;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+}
+
+.play {
+  cursor: pointer;
+  border:none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  background-color: red;
+  padding: 5px 15px;
+}
+
+.play:hover {
+  color: white;
+}
+
+@media screen and (max-width:720px){
+  #hero{
+    padding-top: 2rem;
+      width: 100%;
+      height: 170vh;
+      background-image: url(../assets/imgs/music\ home1.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+      .hero__main{
+        text-align: center;
+    }
+    .video1{
+      margin-left: 0%;
+      width: 20rem;
+    }
+  }
+
+/*********About***********/
+#about{
+  height: 30vh;
+  background-color: var(--white-color);
+  border-radius: 1rem;
+  margin-top: -1.2rem;
+}
+.container__crew{
+  padding:3rem 6rem;
+}
+.crew__main{
+color:red;
+font-size: 50;
+font-weight: 50;
+}
+.crew__subtitle{
+  font-weight: 800;
+  font-size: 400;
+  color: black;
+  margin:1rem 0;
+}
+.crew__title{
+  font-size: 1rem;
+  color: black;
+  margin-top: .5rem;
+  margin:1rem 0;
+  border-radius: 15%;
+}
+.crew_box{
+  margin: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  
+  }
+  .crew_box .crew_img::after{
+content: "";
+position: absolute;
+width: 100%;
+height: 40%;
+bottom: 0;
+  }
+
+.crew_box .crew_img:hover::after{
+background: linear-gradient(to bottom,#ff00,#ff0000);
+  }
+
+  
+  .crew_img {
+    width: 200px;
+    height: 210px;
+    position: relative;
+    overflow: hidden;
+    border-radius:15px;
+    background-size: cover;
+
+  }
+
+  .info{
+    position: absolute;
+    font-weight: 200;
+    font-size: 15px;
+    text-align: left;
+    bottom: 0%; 
+    line-height: 1px;
+    padding-left: 4px;
+    color: white; 
+}
+.info__title{
+  font-size: 20px;
+}
+
+  
+@media screen and (max-width:720px){
+
+  #about{
+    margin-bottom: 12rem;
+  }
+.crew__main ,.crew__subtitle, .crew__title{
+  text-align: center;
+}
+}
+
+/*********Services***********/
+
+.marketing__container{
+padding:0 6rem 5rem;
+}
+.box {
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  height: 100%;
+}
+.service__title{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+.marketing__icon{
+ font-size: 45px;
+}
+
+.client{padding: 10px;
+  text-align: center;
+}
+.main{
+  color: red;
+  font-size: 300;
+}
+@media screen and (max-width:720px){
+  .service__title,.marketing__icon ,.main{
+    text-align: center;
+  }}
+
+/*********Swiper CSS**********/
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: -5rem;
+  background-color: #e1e5ef;
+}
+
+.swiper-slide { 
+  text-align: center;
+  font-size: 18px;
+  height: 100%;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.color{
+  color: #bdbdbd;
+}
+
+
+  /**********boost***********/
+  #boost{
+    padding:  50px  6rem;
+    background-color: gray;
+  }
+  
+  .boost__description{
+    font-weight: 400;
+    color:gray;
+    font-size: large;
+  }
+  
+  .boost__main{
+    font-weight: bolder;
+    color: #525050;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+  
+  .boost__explain{
+    font-weight:500;
+    margin-left: .5rem;
+  }
+  
+  .start{ margin: 30px;
+    text-align: center;
+    color: white ;
+    font-size: large;
+  }
+  
+
+  
+/**********Footer***********/
+#footer{height: 40vh;
+  background-color: black;
+}
+.footer__container{
+  padding:2rem 6rem;
+
+}
+
+.footer__logo{
+  width: 50%;
+  margin-bottom: .8rem;
+}
+.footer__description{
+  font-size: large;
+  color: white;
+  transition: all .5s;
+}
+.footer__description:hover{
+  color: var(--black-color);
+}
+.footer__social{
+  font-size: 1.5rem;
+  margin: 1rem 5px;
+  padding: .5rem .6rem;
+  color: var(--white-color);
+  background-color: #bdbdbd;
+
+border-radius: 50%;
+  transition: all .5s;
+}
+
+.footer__social:hover{
+  color: var(--black-color);
+}
+
+.footer__title{
+  color: #fff;
+  font-weight: bold;
+}
+
+.footer__link{
+  color: var(--white-color);
+  margin-bottom: 2.5rem;
+  transition: all 0.2s;
+}
+
+.footer__link:hover{
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.footer__link__list{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: small;
+  transition: all .5s;
+}
+
+.footer__link__list:hover{
+  color: var(--black-color);
+}
+.footer__link__list1{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: small;
+  font-weight:bold;
+  transition: all .5s;
+}
+
+.footer__link__list1:hover{
+  color: var(--black-color);
+}
+
+#footer_rights{
+width: 100%;
+height: 5px;
+text-align: center;
+color: white;
+}
+
+
+.footer__terms{
+  margin: 1rem 0;
+}
+
+.footer__terms-link{
+  margin: 0 .5rem;
+  transition: .1s;
+  color: white;
+}
+.footer__terms-link:hover{
+ text-decoration: none;
+ color: black ;
+ transition: .1s;
+
+}
+.footer__terms-link{
+  color: var(--second-color);
+}
+.footer__copy{
+  background-color: black;
+}
+
+@media screen and (max-width:720px){
+  #footer{height: 100vh;
+    background-color: black;
+  }
+
+}
+
+
+
+/**** Scroll top ****/
+.scrolltop{
+  position: fixed;
+  bottom: -30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#525050;
+  transition: .4s;
+  visibility: hidden;
+}
+
+.scrolltop:hover{
+ color: red;
+}
+
+.scrolltop__icon{
+  font-size: 2rem;
+  color: var(--white-color);
+}
+
+/* Show scrolltop */
+.show-scroll{
+  visibility: visible;
+  top: -100%;
+ right: 50rem;
+}
